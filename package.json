@@ -1,0 +1,42 @@
+{
+  "name": "hackerbayinterview",
+  "version": "1.0.0",
+  "description": "hackerbay interview program that centers on authentication, image thumbnail and json patch",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "nyc --reporter=text mocha --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alagbada/HackerBayInterview.git"
+  },
+  "author": "Temitope Alagbada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alagbada/HackerBayInterview/issues"
+  },
+  "homepage": "https://github.com/alagbada/HackerBayInterview#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "chai-spies": "^1.0.0",
+    "express": "^4.17.0",
+    "fast-json-patch": "^2.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.11",
+    "request": "^2.88.0",
+    "sharp": "^0.22.1",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "chai-files": "^1.4.0",
+    "coveralls": "^3.0.3",
+    "mocha": "^6.1.4",
+    "nodemon": "^1.19.0",
+    "nyc": "^14.1.1",
+    "sinon": "^7.3.2"
+  }
+}
