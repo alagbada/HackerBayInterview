@@ -29,7 +29,7 @@ router.post('/login', (req, res) => {
         logger.log('info', `${username} has logged in successfully`);
         return res.status(200).send({auth: true, token: token});
     } 
-    logged.log('error', 'invalid login attempt');
+    logger.log('error', 'invalid login attempt');
     return res.status(404).send({auth: false, token: null});
 
 });

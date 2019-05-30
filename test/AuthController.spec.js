@@ -34,17 +34,7 @@ describe ("AuthController", () => {
 
         it ("should not be able to login", (done) => {
             chai.request(app).post('/api/v2/login')
-                .send({username: 'admin', password: ''})
-                .end((err, res) => {
-                    res.should.have.status(404);
-                    res.should.be.json;
-                    done();
-                });
-        });
-
-        it ("should not be able to login", (done) => {
-            chai.request(app).post('/api/v2/login')
-                .send({username: 'admin', password: ''})
+                .send({username: 'admin', password: null})
                 .end((err, res) => {
                     res.should.have.status(404);
                     expect(res.body.auth).to.be.false;

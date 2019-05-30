@@ -4,7 +4,6 @@ const app = require('../server');
 chai.use(chaiHttp);
 let should  = chai.should();
 let expect = chai.expect;
-// chai.expect;
 
 let objectsToPatch = {
     "jsonobj" : {

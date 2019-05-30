@@ -8,7 +8,6 @@ const request = require('request');
 
 const config = require('../config');
 const logger = require('../logger');
-
 router.use(bodyParser.urlencoded({ extended: false }));
 router.use(bodyParser.json());
 
@@ -80,11 +79,7 @@ const imageController = (req, res) => {
 
 router.post('/imageresize', imageController);
 
-/**
- * json patch router
- * @module ImageController
- * @type {router, download, resizeImage, imageController}
- */
+
 module.exports = {
     router,
     download,

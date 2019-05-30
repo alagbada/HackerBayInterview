@@ -13,7 +13,6 @@ chai.use(chaiFiles);
 let should  = chai.should();
 let expect = chai.expect;
 let file = chaiFiles.file;
-// chai.expect;
 
 
 describe ("ImageController", () => {
@@ -57,6 +56,28 @@ describe ("ImageController", () => {
                 });
         });
 
+        it ("should not resize or downloaded images without token", (done) => {
+            chai.request(app).post('/api/v2/login')
+                .send({username: 'admin', password: 'pass'})
+                .end((err, res) => {
+                    res.should.have.status(200);
+                    res.should.be.json;
+                    expect(res.body.auth).to.be.true;
+                    expect(res.body.token).to.be.not.empty;
+                    let token = "";
+                    chai.request(app).post('/api/v2/imageresize')
+                    .set('x-access-token', token)
+                    .send(measure)
+                    .end((err, res) => {
+                        res.should.have.status(401);
+                        expect(file('./images/test.jpg')).to.not.exist;
+                        done();
+                    });
+                });
+        });
+
     });
+
+
 });
 
