@@ -7,7 +7,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const logger = require('./logger');
-
+const process = require('process');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -15,7 +15,7 @@ const AuthController = require('./controllers/AuthController');
 const JsonPatchController = require('./controllers/JsonPatchController');
 const ImageController = require('./controllers/ImageController');
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
     res.send('It is working');
