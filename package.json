@@ -26,7 +26,7 @@
     "express": "^4.17.0",
     "fast-json-patch": "^2.1.0",
     "jsonwebtoken": "^8.5.1",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "request": "^2.88.0",
     "sharp": "^0.22.1",
     "winston": "^3.2.1"
