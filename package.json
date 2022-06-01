@@ -28,7 +28,7 @@
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.11",
     "request": "^2.88.0",
-    "sharp": "^0.22.1",
+    "sharp": "^0.30.5",
     "winston": "^3.2.1"
   },
   "devDependencies": {
